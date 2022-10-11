@@ -2,7 +2,7 @@ import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
   appId: 'io.ionic.starter',
-  appName: 'ionic-demo-app',
+  appName: 'Sensors Smart Home',
   webDir: 'www',
   bundledWebRuntime: false
 };

@@ -16,6 +16,21 @@ const routes: Routes = [
     loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
   },
   {
+    path: 'power',
+    canActivate: [ AuthGuard],
+    loadChildren: () => import('./power/power.module').then( m => m.PowerPageModule)
+  },
+  {
+    path: 'bme280',
+    canActivate: [ AuthGuard],
+    loadChildren: () => import('./bme280/bme280.module').then( m => m.Bme280PageModule)
+  },
+  {
+    path: 'battery',
+    canActivate: [ AuthGuard],
+    loadChildren: () => import('./battery/battery.module').then( m => m.BatteryPageModule)
+  },
+  {
     path: 'login',
     canActivate: [ AuthGuard],
     data: { authGuardPipe : redirectLoggedInToHome},
@@ -32,6 +47,18 @@ const routes: Routes = [
     canActivate: [ AuthGuard],
     data: { authGuardPipe : redirectUnauthorizedToLogin},
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+  },
+  {
+    path: 'power',
+    loadChildren: () => import('./power/power.module').then( m => m.PowerPageModule)
+  },
+  {
+    path: 'bme280',
+    loadChildren: () => import('./bme280/bme280.module').then( m => m.Bme280PageModule)
+  },
+  {
+    path: 'battery',
+    loadChildren: () => import('./battery/battery.module').then( m => m.BatteryPageModule)
   }
 ];
 
