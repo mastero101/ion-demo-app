@@ -1,6 +1,6 @@
 <ion-header>
-  <ion-toolbar color="primary">
-    <ion-title>Login</ion-title>
+  <ion-toolbar color="mycolor">
+    <ion-title style="color: aliceblue;">Login</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -18,10 +18,23 @@
     </ion-list>
     <ion-row>
       <ion-col>
-        <ion-button type="submit" expand="block">Login</ion-button>
+        <ion-button shape="round" type="submit" expand="block">Login</ion-button>
       </ion-col>
       <ion-col>
-        <ion-button routerLink="/register" type="button" expand="block">Register</ion-button>
+        <ion-button shape="round" routerLink="/register" type="button" expand="block">Register</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button onclick="googleLogin()" type="button" expand="full" shape="round" color="danger">Google</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button type="button" expand="full" shape="round" fill="clear"></ion-button>
       </ion-col>
     </ion-row>
   </form>

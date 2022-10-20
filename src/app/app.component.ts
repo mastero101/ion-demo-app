@@ -12,12 +12,13 @@ import { AuthService } from './services/auth.service';
 })
 export class AppComponent {
   public appPages = [
-    { title: 'Home', url: '/home', icon: 'mail' },
-    { title: 'PowerMeter', url: '/power', icon: 'paper-plane' },
-    { title: 'BME280', url: '/bme280', icon: 'heart' },
-    { title: 'Battery', url: '/battery', icon: 'archive' },
-    { title: 'Register', url: '/register', icon: 'trash' },
-    { title: 'Login', url: '/login', icon: 'warning' },
+    { title: 'Home', url: '/home', icon: 'home' },
+    { title: 'PowerMeter', url: '/power', icon: 'speedometer' },
+    { title: 'BME280', url: '/bme280', icon: 'thermometer' },
+    { title: 'Battery', url: '/battery', icon: 'battery-dead' },
+    { title: 'Camera', url: '/camera', icon: 'camera' },
+    { title: 'Register', url: '/register', icon: 'book' },
+    { title: 'Login', url: '/login', icon: 'log-in' },
   ];
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
 

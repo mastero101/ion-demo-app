@@ -8,7 +8,7 @@ const redirectLoggedInToHome = () => redirectLoggedInTo(['/home']);
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'folder/Inbox',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
@@ -43,6 +43,12 @@ const routes: Routes = [
     loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
   },
   {
+    path: 'camera',
+    canActivate: [ AuthGuard],
+    data: { authGuardPipe : redirectUnauthorizedToLogin},
+    loadChildren: () => import('./camera/camera.module').then( m => m.CameraPageModule)
+  },
+  {
     path: 'home',
     canActivate: [ AuthGuard],
     data: { authGuardPipe : redirectUnauthorizedToLogin},
@@ -59,7 +65,15 @@ const routes: Routes = [
   {
     path: 'battery',
     loadChildren: () => import('./battery/battery.module').then( m => m.BatteryPageModule)
-  }
+  },
+  {
+    path: 'camera',
+    loadChildren: () => import('./camera/camera.module').then( m => m.CameraPageModule)
+  },
+  {
+    path: 'external',
+    loadChildren: () => import('./external/external.module').then( m => m.ExternalPageModule)
+  },
 ];
 
 @NgModule({
