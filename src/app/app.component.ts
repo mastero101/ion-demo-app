@@ -35,4 +35,14 @@ export class AppComponent {
     await this.auth.logout();
     this.router.navigate(['/login']);
   }
+
+  toggleTheme() {
+    const appElement = document.querySelector('ion-app');
+    const elementClasses = appElement.classList;
+    if (elementClasses.contains('dark-theme')) {
+      elementClasses.remove('dark-theme');
+    } else {
+      elementClasses.add('dark-theme');
+    }
+  }
 }

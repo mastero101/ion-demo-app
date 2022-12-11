@@ -121,3 +121,12 @@ ion-item.selected {
 ion-item {
   --color: black;
 }
+
+.dark-theme {
+  --ion-background-color: black;
+  --ion-text-color: white;
+
+  ion-menu.md ion-item ion-label {
+    color: #d7d8da;
+  }
+}
